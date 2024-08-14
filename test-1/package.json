@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "vitest": "^2.0.5"
+  },
+  "scripts": {
+    "test": "vitest"
   }
 }

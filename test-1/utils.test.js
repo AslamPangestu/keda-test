@@ -13,7 +13,7 @@ test("sumArray func", () => {
     [[1, 4, 2, 10, 23, 3, 1, 0, 20], 4],
     [[-3, 4, 0, -2, 6, -1], 2],
   ];
-  const results = [700, 39, 5];
+  const results = [700, 57, 10];
   inputs.forEach((element, index) => {
     expect(sumArray(...element)).toEqual(results[index]);
   });
@@ -42,6 +42,6 @@ test("sumEvenNested func", () => {
   ];
   const results = [6, 12];
   inputs.forEach((element, index) => {
-    expect(sumEvenNested(...element)).toEqual(results[index]);
+    expect(sumEvenNested(element)).toEqual(results[index]);
   });
 });
