@@ -1,0 +1,33 @@
+.priceSection
+    display: flex
+    flex-direction: column
+    gap: 0.5rem
+    padding: 2.5rem 0
+
+    & > span
+        text-align: center
+        font-weight: bold
+        font-size: 1.5rem
+
+.priceContainer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 1rem
+    & > div
+        flex: 1
+        display: flex
+        gap: 1rem
+        flex-direction: column
+        & > div:not(:last-child)
+            text-align: center
+            font-weight: bold
+            font-size: 1.25rem
+        & > div:nth-child(2)
+            font-size: 2rem
+        & > ul
+            padding: 0 1rem
+
+@media only screen and (min-width: 769px)
+    .priceContainer
+        flex-direction: row
