@@ -10,6 +10,8 @@ main
   max-width: 1280px
   margin: -78px auto 0
 
-@media only screen and (max-width: 1280px)
-  main
-    margin: -78px 0.5rem
+@media only screen and (max-width: 640px)
+  main > section:not(:first-child)
+    margin: 0 0.5rem
+  main > section:first-child
+    margin: -78px 0

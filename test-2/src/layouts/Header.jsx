@@ -13,7 +13,7 @@ const MENUS = [
   },
   {
     name: "Pricing",
-    path: "#pricing",
+    path: "#price",
   },
   {
     name: "Contact",
@@ -59,6 +59,14 @@ const HeaderLayout = () => {
 
   const _onShowModal = () => {
     dialogRef.current.showModal();
+    if (isTabletOrMobile) {
+      setToggle(false);
+    }
+  };
+
+  const _onClose = () => {
+    dialogRef.current.close();
+    setToggle(false);
   };
 
   return (
@@ -105,11 +113,13 @@ const HeaderLayout = () => {
               <nav>{item.name}</nav>
             </a>
           ))}
-          <Button label="Login" onClick={_onShowModal} />
+          <div>
+            <Button label="Login" onClick={_onShowModal} />
+          </div>
         </div>
       ) : null}
       <dialog ref={dialogRef} className={styles.dialogContainer}>
-        <LoginModal />
+        <LoginModal onClose={_onClose} />
       </dialog>
     </>
   );

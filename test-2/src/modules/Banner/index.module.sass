@@ -1,0 +1,43 @@
+.bannerModule
+    background: url("src/assets/background.png")
+    background-size: cover
+    width: 100%
+    height: 100vh
+    & > div
+        position: relative
+        height: 100%
+        width: 100%
+
+.title
+    position: absolute
+    top: 45vh
+    left: 100px
+    font-size: 1.35rem
+    font-style: italic
+
+.description
+    position: absolute
+    top: 200px
+    right: 200px
+    text-align: center
+    font-size: 1.15rem
+
+.image
+    position: absolute
+    top: 60vh
+    left: 100px
+    & > img
+        width: 300px
+
+@media only screen and (max-width: 640px)
+    .title
+        top: 20vh
+        left: 0
+
+    .description
+        top: 40vh
+        left: 0
+        right: 0
+
+    .image
+        left: 0

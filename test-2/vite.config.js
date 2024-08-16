@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  assetsInclude: ["**/*.png"],
   plugins: [react({ jsxRuntime: "classic" })],
   preview: { port: 3000 },
   server: {

@@ -1,5 +1,9 @@
 .container
   padding: 1rem
+  max-width: 1280px
+  margin: 0 auto
+  z-index: 100
+  position: relative
   a
     font-size: 1.5rem
     font-weight: bold
@@ -11,6 +15,7 @@
   flex-direction: row
   justify-content: space-between
   align-items: center
+  padding: 0 1rem
 
 .menuContainer
   display: flex
@@ -37,6 +42,7 @@
   width: 100%
   padding: 0
   transition: all 0.5s ease-in-out
+  z-index: 2
 
   > *
     display: none
@@ -53,8 +59,6 @@
     > *
       display: block
       padding: 1rem
-  > button
-    margin: 0 1rem
 
 .mobileMenu
   display: flex
@@ -83,7 +87,7 @@
     width: 100%
     height: 0.125rem
     border-radius: 2px
-    background-color: rgb(0, 122, 255)
+    background-color: black
     box-shadow: 0 0.5px 2px 0 hsla(0, 0%, 0%, 0.2)
     transition: background-color 0.4s
     position: relative
@@ -109,13 +113,20 @@
 
     &:nth-child(3)
       animation: ease 0.8s menu-icon-bottom forwards
-      background-color: rgb(255, 59, 48)
+      background-color: black
 
 .dialogContainer
-  & > div
+  padding:0
+  & > div:nth-child(1)
+    text-align: right
+    margin: 12px 12px 0 0
+    & > span
+      cursor: pointer
+  & > div:nth-child(2)
     text-align: center
     font-weight: bold
     font-size: 1.5rem
+    margin-top: 1rem
   &::backdrop 
     backdrop-filter: blur(0.25rem)
 
@@ -123,7 +134,7 @@
   display: flex
   flex-direction: column
   gap: 1rem
-  margin-top: 2rem
+  margin: 2rem
   width: 300px
 
 @keyframes menu-icon-top
